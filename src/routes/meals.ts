@@ -3,11 +3,8 @@ import { createMealSchema } from '../models/create-meal-schema'
 import { knex } from '../database'
 import { randomUUID } from 'crypto'
 import { formattedDate } from '../utils/date'
+import { Params } from '../@types/params'
 
-interface Params {
-  userId: string
-  id: string
-}
 export async function mealsRoutes(app: FastifyInstance) {
   app.get<{ Params: Params }>('/user/:userId/meals', async (request) => {
     const { userId } = request.params
