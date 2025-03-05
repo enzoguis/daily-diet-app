@@ -12,8 +12,8 @@ declare module 'knex/types/tables' {
       user_id: string
       name: string
       description: string
-      dateAndTime: Date
-      isPartOfDiet: string
+      date_and_time: string
+      is_part_of_diet: string
     }
   }
 }

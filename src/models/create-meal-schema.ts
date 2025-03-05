@@ -1,6 +1,6 @@
 import { z } from 'zod'
 
-const formattedDate = z.preprocess((value) => {
+const stringToDate = z.preprocess((value) => {
   if (typeof value === 'string') {
     return new Date(value)
   }
@@ -11,5 +11,5 @@ export const createMealSchema = z.object({
   name: z.string(),
   description: z.string(),
   isPartOfDiet: z.enum(['yes', 'no']),
-  dateAndTime: formattedDate,
+  dateAndTime: stringToDate,
 })
