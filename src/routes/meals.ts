@@ -55,4 +55,11 @@ export async function mealsRoutes(app: FastifyInstance) {
 
     return reply.status(200).send()
   })
+
+  app.delete<{ Params: Params }>('/meal/:id', async (request, reply) => {
+    const { id } = request.params
+    await knex('meals').where({ id }).delete()
+
+    return reply.status(204).send()
+  })
 }
