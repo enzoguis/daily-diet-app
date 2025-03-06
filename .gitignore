@@ -1,0 +1,4 @@
+db/*.ts
+node_modules
+.env
+.env.test
