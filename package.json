@@ -9,7 +9,7 @@
   "scripts": {
     "dev": "tsx watch src/server.ts",
     "start": "node build/server.js",
-    "knex": "npx --no-install tsx node_modules/knex/bin/cli.js migrate:latest",
+    "knex": "npx tsx node_modules/knex/bin/cli.js migrate:latest",
     "build": "tsup src --out-dir build",
     "test": "vitest"
   },
@@ -30,7 +30,7 @@
     "knex": "^3.1.0",
     "pg": "^8.13.3",
     "sqlite3": "^5.1.7",
-    "tsx": "^4.19.3",
+    "tsx": "4.19.3",
     "zod": "^3.24.2"
   }
 }
