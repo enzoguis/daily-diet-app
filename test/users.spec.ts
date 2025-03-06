@@ -1,7 +1,6 @@
 import request from 'supertest'
-import { afterAll, beforeAll, describe, it } from 'vitest'
+import { afterAll, beforeAll, describe, beforeEach, it } from 'vitest'
 import { app } from '../src/app'
-import { beforeEach } from 'node:test'
 import { execSync } from 'child_process'
 
 describe('Users routes', () => {

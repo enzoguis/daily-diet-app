@@ -1,14 +1,11 @@
 import request from 'supertest'
-import { afterAll, beforeAll, describe, it } from 'vitest'
+import { afterAll, beforeAll, describe, beforeEach, it } from 'vitest'
 import { app } from '../src/app'
-import { beforeEach } from 'node:test'
 import { execSync } from 'child_process'
-import { create } from 'domain'
 
 describe('Meals routes', () => {
   beforeAll(async () => {
     await app.ready()
-    execSync('npm run knex -- migrate:latest')
   })
 
   beforeEach(() => {
